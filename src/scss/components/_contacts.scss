@@ -1,0 +1,233 @@
+.contacts {
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(260deg, #0a3a83 -10%, #1b4c9b 90%);
+  @media (max-width: 575.99px) {
+    padding-top: 30px;
+  }
+  &::before, &::after {
+    content: "";
+    z-index: 3;
+    position: absolute;
+    background-size: cover;
+  }
+  &::before {
+    left: -35px;
+    bottom: -35px;
+    width: 624px;
+    height: 726px;
+    background-image: url("../img/contacts/decor-left.svg");
+    @media (max-width: 1919.99px) {
+      width: 486px;
+      height: 566px;
+    }
+    @media (max-width: 1439.99px) {
+      width: 314px;
+      height: 366px;
+    }
+    @media (max-width: 575.99px) {
+      width: 365px;
+      height: 425px;
+      left: -150px;
+      bottom: 0;
+    }
+  }
+  &::after {
+    right: 0;
+    bottom: 0;
+    width: 332px;
+    height: 386px;
+    background-image: url("../img/contacts/decor-right.svg");
+    @media (max-width: 1919.99px) {
+      width: 280px;
+      height: 326px;
+    }
+    @media (max-width: 1279.99px) {
+      width: 228px;
+      height: 266px;
+    }
+    @media (max-width: 575.99px) {
+      right: -75px;
+      bottom: -35px;
+    }
+  }
+  &__blur {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    z-index: 1;
+    width: 1150px;
+    height: 1150px;
+    background-color: rgba(38, 214, 206, 0.2);
+    filter: blur(250px);
+    transform: translateY(-50%);
+}
+
+  &__container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    @media (max-width: 575.99px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left, &__right {
+    width: 630px;
+    max-width: 100%;
+  }
+
+  &__left {
+    display: flex;
+    align-items: flex-end;
+    @media (max-width: 575.99px) {
+      justify-content: center;
+      order: 2;
+    }
+  }
+
+  &__image {
+    width: 523px;
+    @media (max-width: 991.99px) {
+      width: 423px;
+    }
+    @media (max-width: 767.99px) {
+      width: 323px;
+    }
+    @media (max-width: 575.99px) {
+      width: 283px;
+    }
+  }
+
+  &__right {
+    @media (min-width: 576px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @media (min-width: 992px) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+    @media (max-width: 575.99px) {
+      order: 1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 60px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.4;
+    color: var(--color-light);
+    @media (max-width: 991.99px) {
+      font-size: 25px;
+    }
+    @media (max-width: 575.99px) {
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+  }
+}
+
+.contact-form {
+  &__body {
+    margin-bottom: 60px;
+    @media (max-width: 575.99px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__field {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--color-light);
+    @media (max-width: 575.99px) {
+      font-size: 14px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    outline: 1px solid transparent;
+    border: 1px solid var(--color-light);
+    border-radius: 0px;
+    padding: 15px 20px;
+    max-width: 365px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--color-light);
+    transition: outline-color 0.3s ease-in-out;
+    @media (max-width: 575.99px) {
+      max-width: 100%;
+      font-size: 16px;
+    }
+    &::placeholder {
+      font-weight: 300;
+      opacity: 0.6;
+      color: #fefefe;
+    }
+    &:active, &:focus {
+      outline-color: var(--color-light);
+    }
+  }
+
+  &__success {
+    position: relative;
+    width: 485px;
+    padding-left: 75px;
+    max-width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 45px;
+      height: 45px;
+      background-image: url("../img/form-success.svg");
+      background-size: cover;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #ffb20b;
+    @media (max-width: 991.99px) {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+    @media (max-width: 575.99px) {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--color-light);
+    @media (max-width: 991.99px) {
+      font-size: 18px;
+    }
+    @media (max-width: 575.99px) {
+      font-size: 16px;
+    }
+  }
+}

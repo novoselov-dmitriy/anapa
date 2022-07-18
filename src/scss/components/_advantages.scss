@@ -1,0 +1,132 @@
+.advantages {
+  overflow: hidden;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @media (max-width: 991.99px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media (max-width: 575.99px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    background-size: cover;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    width: 239px;
+    height: 287px;
+    background-image: url("../img/advantages/decor-left.svg");
+    @media (max-width: 1919.99px) {
+      width: 181px;
+      height: 218px;
+    }
+    @media (max-width: 1439.99px) {
+      width: 139px;
+      height: 167px;
+    }
+    @media (max-width: 575.99px) {
+      top: -10px;
+      left: auto;
+      right: -20px;
+      width: 110px;
+      height: 139px;
+      transform: scaleX(-1);
+    }
+  }
+  &::after {
+    right: 0;
+    bottom: 0;
+    width: 332px;
+    height: 386px;
+    background-image: url("../img/advantages/decor-right.svg");
+    @media (max-width: 1919.99px) {
+      width: 239px;
+      height: 278px;
+    }
+    @media (max-width: 1439.99px) {
+      width: 161px;
+      height: 188px;
+    }
+    @media (max-width: 575.99px) {
+      content: none;
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @media (max-width: 991.99px) {
+      margin-bottom: 15px;
+    }
+    @media (max-width: 575.99px) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-size: 18px;
+    opacity: 0.75;
+    @media (max-width: 575.99px) {
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media (max-width: 1023.39px) {
+      grid-template-columns: repeat(2, minmax(260px, 1fr));
+    }
+    @media (max-width: 991.99px) {
+      column-gap: 30px;
+    }
+    @media (max-width: 575.99px) {
+      grid-template-columns: minmax(280px, 400px);
+      row-gap: 15px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.advantage {
+  &__number {
+    width: max-content;
+    border-bottom: 4px solid #c2cfdb;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 70px;
+    color: var(--color-accent-primary-light);
+    @media (max-width: 991.99px) {
+      font-size: 55px;
+    }
+    @media (max-width: 575.99px) {
+      border-width: 3px;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      font-size: 40px;
+    }
+  }
+}
